@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: dev
+camel:
+  component.servlet.mapping.context-path: /*
+  springboot:
+    shutdownTimeout: 2
+    main-run-controller: true
+  
+---
+
+spring:
+  profiles: dev
+file:
+  to: /data/out
+timer:
+  period: 3000
+  repeatCount: 10
+
